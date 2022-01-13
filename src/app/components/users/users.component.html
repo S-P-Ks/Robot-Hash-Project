@@ -1,0 +1,28 @@
+<div class="container d-flex justify-content-center">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">PIC</th>
+        <th scope="col">Name</th>
+        <th scope="col">UserName</th>
+        <th scope="col">Email</th>
+        <th scope="col">WEBSITE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let user of Users"
+        style="cursor: pointer"
+        (click)="goThere(user)"
+      >
+        <th scope="row">{{ user.id }}</th>
+        <th><img [src]="user.pic" height="50" width="50" /></th>
+        <td>{{ user.name }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.website }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
